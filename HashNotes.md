@@ -1,6 +1,6 @@
-###Topic: Hash Tables
+### Topic: Hash Tables
 
-##HASHING BASICS 
+## HASHING BASICS 
 
 Hashing provides O(1) time on average forr inserting, searching, and deleting
 
@@ -17,7 +17,7 @@ Ex: Hash function h(x)
 
 **Calculations aren't correct, numbers are for showing 
 
-#Techniques to fix collision:
+# Techniques to fix collision:
 
 1)Chaining - idea of making each cell of the hash table point to a linked list  
 2)Opened Addressing - elements are stored in the hash table itsel. It is divided into the folllowing three types:
@@ -25,7 +25,7 @@ Ex: Hash function h(x)
 			-Quadratic probing
 			-Double Hashing
 
-##HASHING - SEPARATE CHAINING 
+## HASHING - SEPARATE CHAINING 
 
 Defintion: make each cell (index) of the hash table point to a linked list
 
@@ -56,7 +56,7 @@ Hash function: h(x) = x mod 7
 
 Keys: 50, 700, 76, 85, 92, 73, 101
 
-//i denotes as index
+// i denotes as index
 
  50 mod 7 = i 1
  
