@@ -1,3 +1,3 @@
 # C-Practice
 
-Noltes on data structures compiled from readings, research, and youtube videos.
+Notes on algorithms and data structures compiled from readings, research, and youtube videos.
