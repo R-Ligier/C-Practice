@@ -59,7 +59,7 @@ struct node{
 Definition: Checks the height of the left and the right sub-trees and assures the difference isn't greater than 1
 
 
-![AVL trees](AVL trees.jpg "Optional Title")
+![Animated gif](AVL trees.jpg "Animation that shows auto completion")
 
 
 #### Checking if a Binary Tree is Balanced
