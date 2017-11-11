@@ -2,6 +2,33 @@
 
 - Definition: An effecient structure to organize data to perform quick search and updating data
 
+#### How does it work?
+- The data must be sorted
+- Left part of the tree should consist of data less than the root node
+- Right side of the tree should consist of data greater than the root node
+- It halves the searchable items which reduces the count of comparisons to be made
+
+- Algorithm:
+Step 1: Begin searchin g the data from the middle of the list
+Step 2: If it's amatch, return the index of the data position and eexit
+Step 3: If not, divide the list using the prob formula and fnd the new middle
+Step 4: If data is greater than middle, search in higher sub-list
+Step 5: If data is smaller than middle, search in lower sub-list
+Step 6: Repeat until match
+
+#### Terminology
+
+- Root = the node on the very top, "starting point"
+- Parent = describes the relationship between two nodes
+- Child = the node connected to the parent
+- Leaf = a node that does not point to any nodes, it only has a parent but no children
+- Pre-order Traversal (prefix) = process all nodes of a tree by processing the root, then recursively processing all subtrees.
+- Post-order Traversal (postfix) = Process all nodes of a tree by recursively processing all subtrees, then finally processing the root
+- In-order Traversal = Process all nodes of a tree by recursively processing the left subtree, then processing the root, and finally the right subtree
+- Tree is balanced = for all nodes the difference between the heghts of left and right subtrees is not greater than 1
+
+
+#### Defining a Node
 struct node{
 
 	 // want each node to hold an int value
@@ -12,29 +39,20 @@ struct node{
 	node* right;
 };
 
-#### Conmplexity 
+#### Complexity
 
 - When searching, we take n which is the middle element and if it isn't what were looking for keep dividing n/2, n/4, n/.... until we reach our answer.
-
 - Searching = O(log n) 
 - Inserting = O(log n)
 - Removing = O(log n)
 
 *To keep the BT's complexity at O(log n), the tree must be balanced
 
-#### Terminology
+### AVL/Balanced Binary Tree
 
-- Root = the node on the very top, "starting point"
-- Parent = describes the relationship between two nodes
-- Child = the node connected to the parent
-- Leaf = a node that does not point to any nodes, it only has a parent but no children
-- Tree is balanced = for all nodes the difference between the heghts of left and right subtrees is not greater than 1
+Definition: Checks the height of the left and the right sub-trees and assures the difference isn't greater than 1
 
-#### Properties of a Binary Search Tree
-
-- Left part of the tree should consist of data less than the root node
-- Right side of the tree should consist of data greater than the root node
-
+https://user-images.githubusercontent.com/25729928/32692340-438a2924-c6e4-11e7-9200-474b2555c102.png
 
 #### Checking if a Binary Tree is Balanced
 
