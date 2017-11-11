@@ -3,6 +3,7 @@
 - Definition: An effecient structure to organize data to perform quick search and updating data
 
 struct node{
+	 
 	 // want each node to hold an int value
 	int data;
 
