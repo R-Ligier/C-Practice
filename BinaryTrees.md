@@ -3,7 +3,6 @@
 - Definition: An effecient structure to organize data to perform quick search and updating data
 
 struct node{
-
 	 // want each node to hold an int value
 	int data;
 
@@ -43,7 +42,7 @@ struct node{
 
 Finding the height of a tree - USE RECURSION
 
-Code for finding the height:
+Code for finding the height and checking if it's balanced:
 
 int CheckTreeHeight(Node root){
 
