@@ -58,8 +58,7 @@ struct node{
 
 Definition: Checks the height of the left and the right sub-trees and assures the difference isn't greater than 1
 
-
-![Alt logo](https://raw.github.com/R-Ligier/C-Practice/Master/AVLTree.png)
+[[AVLTree.png]]
 
 #### Checking if a Binary Tree is Balanced
 
