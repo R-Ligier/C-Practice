@@ -10,11 +10,17 @@
 
 - Algorithm:
 Step 1: Begin searchin g the data from the middle of the list
-Step 2: If it's amatch, return the index of the data position and eexit
+
+Step 2: If it's amatch, return the index of the data position and exit
+
 Step 3: If not, divide the list using the prob formula and fnd the new middle
+
 Step 4: If data is greater than middle, search in higher sub-list
+
 Step 5: If data is smaller than middle, search in lower sub-list
+
 Step 6: Repeat until match
+
 
 #### Terminology
 
