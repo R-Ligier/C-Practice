@@ -9,7 +9,8 @@
 - It halves the searchable items which reduces the count of comparisons to be made
 
 - Algorithm:
-Step 1: Begin searchin g the data from the middle of the list
+
+Step 1: Begin searching the data from the middle of the list
 
 Step 2: If it's amatch, return the index of the data position and exit
 
@@ -35,15 +36,15 @@ Step 6: Repeat until match
 
 
 #### Defining a Node
-struct node{
-	 
-	 // want each node to hold an int value
-	int data;
-
-	// want the node to point to 2 other nodes
-	node* left;
-	node* right;
-};
+    struct node{
+    
+         // want each node to hold an int value
+        int data;
+        
+        // want the node to point to 2 other nodes
+        node* left;
+        node* right;
+    };
 
 #### Complexity
 
@@ -70,7 +71,7 @@ Finding the height of a tree - USE RECURSION
 
 Code for finding the height and checking if it's balanced:
 
-int CheckTreeHeight(Node root){
+    int CheckTreeHeight(Node root){
 
 	// Height of 0.
 	if(root == null) return 0;
@@ -92,15 +93,15 @@ int CheckTreeHeight(Node root){
 	return -1; // not balanaced
 	else
 	return Math.max(leftChildHeight, rightChildHeight) + 1; // Return Height
-}
+    }
 
-bool IsBalanced(Node root){
+    bool IsBalanced(Node root){
 
-	if(CheckTreeHeight(root) == -1){
-      	return false;
-   	}
-   	else{
-	return true;
-  	}
-}
+        if(CheckTreeHeight(root) == -1){
+            return false;
+        }
+        else{
+        return true;
+  	    }
+      }
 
