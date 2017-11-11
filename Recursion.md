@@ -4,12 +4,11 @@
 
 #### **Example:**
 
-int function(int value){
-    if(value < 1){
-    return function(value-1);
+    int function(int value){
+        if(value < 1){
+        return function(value-1);
+        }
     }
-}
-
 
 #### Properties
 - Base Criteria: Must be at least one base criteria/condition that when this condition is met the function stops caling itsdelf recursively
