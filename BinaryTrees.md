@@ -52,17 +52,18 @@ struct node{
 - Inserting = O(log n)
 - Removing = O(log n)
 
-*To keep the BT's complexity at O(log n), the tree must be balanced
+**To keep the BT's complexity at O(log n), the tree must be balanced**
 
 ### AVL/Balanced Binary Tree
 
 Definition: Checks the height of the left and the right sub-trees and assures the difference isn't greater than 1
 
-![alt text](https://github.com/R-Ligier/C-Practice/blob/master/AVLTree.png "image")
+![alt text](https://github.com/R-Ligier/C-Practice/blob/master/AVLTree.png "AVL Tree image")
+
+Balanced Tree Calculation = height of let sub-tree - height of right sub-tree
 
 #### Checking if a Binary Tree is Balanced
 
-- All the branches in the tree are no more than one different in height/lengths
 - Calculate tallest and shortest branch and compare them ... can do this recursively = will take linear time 
 
 Finding the height of a tree - USE RECURSION
