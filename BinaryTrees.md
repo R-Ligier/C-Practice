@@ -45,11 +45,7 @@ struct node{
 	node* right;
 };
 
-<<<<<<< HEAD
 #### Complexity
-=======
-#### Complexity 
->>>>>>> 045bba818fe79b81d5dc9d2c4f8c5b970b5aca69
 
 - When searching, we take n which is the middle element and if it isn't what were looking for keep dividing n/2, n/4, n/.... until we reach our answer.
 - Searching = O(log n) 
@@ -63,7 +59,7 @@ struct node{
 Definition: Checks the height of the left and the right sub-trees and assures the difference isn't greater than 1
 
 
-![Alt text](/relative/path/to/AVL trees.jpg?raw=true "Optional Title")
+![AVL trees](AVL trees.jpg "Optional Title")
 
 
 #### Checking if a Binary Tree is Balanced
@@ -108,18 +104,4 @@ bool IsBalanced(Node root){
 	return true;
   	}
 }
-<<<<<<< HEAD
 
-bool IsBalanced(Node root)
-{
-   if(CheckTreeHeight(root) == -1)
-   {
-      return false;
-   }
-   else
-   {
-      return true;
-   }
-}
-=======
->>>>>>> 045bba818fe79b81d5dc9d2c4f8c5b970b5aca69
