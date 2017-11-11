@@ -12,7 +12,7 @@ struct node{
 	node* right;
 };
 
-#### Conmplexity 
+#### Complexity 
 
 - When searching, we take n which is the middle element and if it isn't what were looking for keep dividing n/2, n/4, n/.... until we reach our answer.
 
@@ -45,35 +45,36 @@ Finding the height of a tree - USE RECURSION
 
 Code for finding the height:
 
-int CheckTreeHeight(Node root)
-{
-  if(root == null) return 0; // Height of 0.
+int CheckTreeHeight(Node root){
 
-  // Check if left is balanaced
-  int leftChildHeight = CheckTreeHeight(root.left);
-  if(leftChildHeight == -1) return -1; // Not Balanced
+	// Height of 0.
+	if(root == null) return 0;
+	
+	// Check if left is balanaced
+	int leftChildHeight = CheckTreeHeight(root.left);
+	
+	// Not Balanced
+	if(leftChildHeight == -1) return -1; 
 
-  // Check if right is balanaced
-  int rightChildHeight = CheckTreeHeight(root.right);
-  if(rightChildHeight == -1) return -1; // Not Balanced
-
-  // Check if current node is balanced
-  int heightDifference = leftChildHeight - rightChildHeight;
-
-  if(Math.abs(heightDifference) > 1)
-   return -1; // not balanaced
-  else
-   return Math.max(leftChildHeight, rightChildHeight) + 1; // Return Height
+	// Check if right is balanaced
+	int rightChildHeight = CheckTreeHeight(root.right);
+	if(rightChildHeight == -1) return -1; // Not Balanced
+	
+	// Check if current node is balanced
+	int heightDifference = leftChildHeight - rightChildHeight;
+	
+	if(Math.abs(heightDifference) > 1)
+	return -1; // not balanaced
+	else
+	return Math.max(leftChildHeight, rightChildHeight) + 1; // Return Height
 }
 
-bool IsBalanced(Node root)
-{
-   if(CheckTreeHeight(root) == -1)
-   {
-      return false;
-   }
-   else
-   {
-      return true;
-   }
+bool IsBalanced(Node root){
+
+	if(CheckTreeHeight(root) == -1){
+      	return false;
+   	}
+   	else{
+	return true;
+  	}
 }
