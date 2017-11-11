@@ -30,7 +30,7 @@ Step 6: Repeat until match
 
 #### Defining a Node
 struct node{
-
+	 
 	 // want each node to hold an int value
 	int data;
 
@@ -39,7 +39,11 @@ struct node{
 	node* right;
 };
 
+<<<<<<< HEAD
 #### Complexity
+=======
+#### Complexity 
+>>>>>>> 045bba818fe79b81d5dc9d2c4f8c5b970b5aca69
 
 - When searching, we take n which is the middle element and if it isn't what were looking for keep dividing n/2, n/4, n/.... until we reach our answer.
 - Searching = O(log n) 
@@ -61,28 +65,42 @@ https://user-images.githubusercontent.com/25729928/32692340-438a2924-c6e4-11e7-9
 
 Finding the height of a tree - USE RECURSION
 
-Code for finding the height:
+Code for finding the height and checking if it's balanced:
 
-int CheckTreeHeight(Node root)
-{
-  if(root == null) return 0; // Height of 0.
+int CheckTreeHeight(Node root){
 
-  // Check if left is balanaced
-  int leftChildHeight = CheckTreeHeight(root.left);
-  if(leftChildHeight == -1) return -1; // Not Balanced
+	// Height of 0.
+	if(root == null) return 0;
+	
+	// Check if left is balanaced
+	int leftChildHeight = CheckTreeHeight(root.left);
+	
+	// Not Balanced
+	if(leftChildHeight == -1) return -1; 
 
-  // Check if right is balanaced
-  int rightChildHeight = CheckTreeHeight(root.right);
-  if(rightChildHeight == -1) return -1; // Not Balanced
-
-  // Check if current node is balanced
-  int heightDifference = leftChildHeight - rightChildHeight;
-
-  if(Math.abs(heightDifference) > 1)
-   return -1; // not balanaced
-  else
-   return Math.max(leftChildHeight, rightChildHeight) + 1; // Return Height
+	// Check if right is balanaced
+	int rightChildHeight = CheckTreeHeight(root.right);
+	if(rightChildHeight == -1) return -1; // Not Balanced
+	
+	// Check if current node is balanced
+	int heightDifference = leftChildHeight - rightChildHeight;
+	
+	if(Math.abs(heightDifference) > 1)
+	return -1; // not balanaced
+	else
+	return Math.max(leftChildHeight, rightChildHeight) + 1; // Return Height
 }
+
+bool IsBalanced(Node root){
+
+	if(CheckTreeHeight(root) == -1){
+      	return false;
+   	}
+   	else{
+	return true;
+  	}
+}
+<<<<<<< HEAD
 
 bool IsBalanced(Node root)
 {
@@ -95,3 +113,5 @@ bool IsBalanced(Node root)
       return true;
    }
 }
+=======
+>>>>>>> 045bba818fe79b81d5dc9d2c4f8c5b970b5aca69
