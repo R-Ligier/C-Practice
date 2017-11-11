@@ -22,7 +22,7 @@ struct node{
 
 *To keep the BT's complexity at O(log n), the tree must be balanced
 
-### Terminology
+#### Terminology
 
 - Root = the node on the very top, "starting point"
 - Parent = describes the relationship between two nodes
@@ -36,3 +36,44 @@ struct node{
 - Right side of the tree should consist of data greater than the root node
 
 
+#### Checking if a Binary Tree is Balanced
+
+- All the branches in the tree are no more than one different in height/lengths
+- Calculate tallest and shortest branch and compare them ... can do this recursively = will take linear time 
+
+Finding the height of a tree - USE RECURSION
+
+Code for finding the height:
+
+int CheckTreeHeight(Node root)
+{
+  if(root == null) return 0; // Height of 0.
+
+  // Check if left is balanaced
+  int leftChildHeight = CheckTreeHeight(root.left);
+  if(leftChildHeight == -1) return -1; // Not Balanced
+
+  // Check if right is balanaced
+  int rightChildHeight = CheckTreeHeight(root.right);
+  if(rightChildHeight == -1) return -1; // Not Balanced
+
+  // Check if current node is balanced
+  int heightDifference = leftChildHeight - rightChildHeight;
+
+  if(Math.abs(heightDifference) > 1)
+   return -1; // not balanaced
+  else
+   return Math.max(leftChildHeight, rightChildHeight) + 1; // Return Height
+}
+
+bool IsBalanced(Node root)
+{
+   if(CheckTreeHeight(root) == -1)
+   {
+      return false;
+   }
+   else
+   {
+      return true;
+   }
+}
