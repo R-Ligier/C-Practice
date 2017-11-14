@@ -1,46 +1,100 @@
 # Topic: Queues
+
 **Definition:** Similar to stacks but queues are opened at both ends of the line. One end is used to insert data and the other to remove.
 - Follows FIFO = first in first out
 
 ![Queues Image](https://github.com/R-Ligier/C-Practice/blob/master/Queues.png "Queues Image")
 
 #### **Basic Operations**
-- enqueue ( ) = add (store) an item to the queue
-- dequeue ( ) = remove (access) an item from the queue
-- peek ( ) = gets the element at the front of the queue without removing it
+- push( ) = add (store) an item to the queue
+- pop ( ) = remove (access) an item from the queue
+- front ( ) = gets the element at the front of the queue without removing it
+- back ( ) = gets the last element
 - isfull ( ) = checks if the queue is full
-- is empty ( ) = checks if the queue is empty
+- empty ( ) = checks if the queue is empty
 
-#### **Enqueue Operation**
+#### **Push( ) Operation**
 - Queues maintain two data pointers, front and rear.
 - The following steps should be taken to enqueue (insert) data into a queue:
 
-Step 1 − Check if the queue is full.
+**CODE:**
 
-Step 2 − If the queue is full, produce overflow error and exit.
+    #include <queue>
+    queue <int> list;
 
-Step 3 − If the queue is not full, increment rear pointer to point the next empty
-space.
+    if(list.empty()) //if the list is empty
+    {
+        for(int i =0; i<4;  ++i)
+        {
+            list.push(i); //adds values to the queue
+        }
+    }
+    
+#### **Pop( ) Operation**
+- Removes the next element in the queue, effectively reducing its size by one.
+- The element removed is the "oldest" element in the queue whose value can be retrieved by calling member queue::front.
 
-Step 4 − Add data element to the queue location, where the rear is pointing.
+**CODE:**
 
-#### **Dequeue Operation**
-- Accessing data from the queue is a process of two tasks − access the data where front is
-pointing and remove the data after access.
-- The following steps are taken to perform dequeue operation:
+    #include <queue>
+    using namespace std;
 
-Step 1 − Check if the queue is empty.
+    queue <int> list;
 
-Step 2 − If the queue is empty, produce underflow error and exit.
+    if(list.empty()){
+        for(int i=0; i<4; ++i)
+        {
+            list.push(i); //adds values to the queue
+        }
+    }
 
-Step 3 − If the queue is not empty, access the data where front is pointing.
+    while(!list.empty())
+    {
+        int i; //"counter"
+        cout<< i << ":" << list.front() << endl; //prints the number that will be popped
+        list.pop(); //pops the first element
+        i++;
+    }
+    
+#### **Front( ) Operation**
+- Returns a reference to the next element in the queue.
+- The next element is the "oldest" element in the queue and the same element that is popped out from the queue when queue::pop is called.
 
-Step 4 − Increment front pointer to point to the next available data element.
+**CODE:**
+
+        #include <queue>
+        queue <int> list;
+
+        if(list.empty()) //if the list is empty
+        {
+            for(int i =0; i<4;  ++i)
+            {
+                list.push(i); //adds values to the queue
+                cout << list.front() << endl; //Outputs 0 b/c it's the oldest element
+            }
+        }
+        
+#### **Back( ) Operation**
+- Returns a reference to the last element in the queue.
+- This is the "newest" element in the queue (i.e. the last element pushed into the queue).
+
+**CODE:**
+
+        #include <queue>
+        queue <int> list;
+
+        if(list.empty()) //if the list is empty
+        {
+            for(int i =0; i<4;  ++i)
+            {
+                list.push(i); //adds values to the queue
+                cout << list.back() << endl;
+            }
+        }
 
 #### **Time Complexity**
 Queue using an underlying array-based list:
-- peek is O(1)
-- enqueue is O(1) unless the array size has to be increased (in which case it’s O(n))
-- dequeue is O(n) : all the remaining elements have to be shifted down by one position to retain the property that the remaining n-1 queue elements reside in the first n-1 position of the array
+- push is O(1) unless the array size has to be increased (in which case it’s O(n))
+- pop is O(n) : all the remaining elements have to be shifted down by one position to retain the property that the remaining n-1 queue elements reside in the first n-1 position of the array
 - searching and random access = O(n)
 
