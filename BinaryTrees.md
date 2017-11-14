@@ -21,7 +21,7 @@
 
 - Successor = the node that comes after in BST ordering
 If a node has no right child, the successor will be the first ancestor having this node in a left subtree. A node's successor need not involve a direct link.
-Example: A,B,C -> A's successor is B, B's successor is C ...
+    - Example: A,B,C -> A's successor is B, B's successor is C ...
 - Predecessor = node that comes after in BST ordering
 
 **Tree Traversal**
@@ -50,7 +50,7 @@ Example: A,B,C -> A's successor is B, B's successor is C ...
         node* right;
     };
 
-##### **Searching in a BST**
+#### **Searching in a BST**
 
 **CODE:**
 
