@@ -104,7 +104,17 @@ If a node has no right child, the successor will be the first ancestor having th
 **CODE:**
 
 ![BST Remove Image](https://github.com/R-Ligier/C-Practice/blob/master/BSTRemove.png "BST Remove Image")
-    
+
+### AVL/Balanced Binary Tree
+
+Definition: Checks the height of the left and the right sub-trees and assures the difference isn't greater than 1
+
+![alt text](https://github.com/R-Ligier/C-Practice/blob/master/AVLTree.png "AVL Tree image")
+
+Balanced Tree Calculation = height of let sub-tree - height of right sub-tree
+
+**To keep the BT's complexity at O(log n), the tree must be balanced**
+
 #### **Checking if a Binary Tree is Balanced**
 
 - Calculate tallest and shortest branch and compare them ... can do this recursively = will take linear time
@@ -145,12 +155,3 @@ Code for finding the height and checking if it's balanced:
   	    }
       }
 
-**To keep the BT's complexity at O(log n), the tree must be balanced**
-
-### AVL/Balanced Binary Tree
-
-Definition: Checks the height of the left and the right sub-trees and assures the difference isn't greater than 1
-
-![alt text](https://github.com/R-Ligier/C-Practice/blob/master/AVLTree.png "AVL Tree image")
-
-Balanced Tree Calculation = height of let sub-tree - height of right sub-tree
